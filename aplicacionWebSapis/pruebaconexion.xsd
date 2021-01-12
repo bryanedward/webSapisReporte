@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="pruebaconexion" targetNamespace="http://tempuri.org/pruebaconexion.xsd" xmlns:mstns="http://tempuri.org/pruebaconexion.xsd" xmlns="http://tempuri.org/pruebaconexion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Valor" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Valor (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.aplicacionWebSapis.Properties.Settings.GlobalReference.Default.Valor" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="actividadTableAdapter" GeneratorDataComponentClassName="actividadTableAdapter" Name="actividad" UserDataComponentName="actividadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Valor (Settings)" DbObjectName="BD_SAPIS.dbo.actividad" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillActi" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataActi" GeneratorSourceName="FillActi" GetMethodModifier="Public" GetMethodName="GetDataActi" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataActi" UserSourceName="FillActi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        actividad.*
+FROM            actividad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="nombre_actividad" DataSetColumn="nombre_actividad" />
+              <Mapping SourceColumn="criterio" DataSetColumn="criterio" />
+              <Mapping SourceColumn="modificado" DataSetColumn="modificado" />
+              <Mapping SourceColumn="creado" DataSetColumn="creado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="pruebaconexion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="pruebaconexion" msprop:Generator_UserDSName="pruebaconexion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="actividad" msprop:Generator_TableClassName="actividadDataTable" msprop:Generator_TableVarName="tableactividad" msprop:Generator_TablePropName="actividad" msprop:Generator_RowDeletingName="actividadRowDeleting" msprop:Generator_RowChangingName="actividadRowChanging" msprop:Generator_RowEvHandlerName="actividadRowChangeEventHandler" msprop:Generator_RowDeletedName="actividadRowDeleted" msprop:Generator_UserTableName="actividad" msprop:Generator_RowChangedName="actividadRowChanged" msprop:Generator_RowEvArgName="actividadRowChangeEvent" msprop:Generator_RowClassName="actividadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre_actividad" msprop:Generator_ColumnVarNameInTable="columnnombre_actividad" msprop:Generator_ColumnPropNameInRow="nombre_actividad" msprop:Generator_ColumnPropNameInTable="nombre_actividadColumn" msprop:Generator_UserColumnName="nombre_actividad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="criterio" msprop:Generator_ColumnVarNameInTable="columncriterio" msprop:Generator_ColumnPropNameInRow="criterio" msprop:Generator_ColumnPropNameInTable="criterioColumn" msprop:Generator_UserColumnName="criterio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="modificado" msprop:Generator_ColumnVarNameInTable="columnmodificado" msprop:Generator_ColumnPropNameInRow="modificado" msprop:Generator_ColumnPropNameInTable="modificadoColumn" msprop:Generator_UserColumnName="modificado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="creado" msprop:Generator_ColumnVarNameInTable="columncreado" msprop:Generator_ColumnPropNameInRow="creado" msprop:Generator_ColumnPropNameInTable="creadoColumn" msprop:Generator_UserColumnName="creado" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

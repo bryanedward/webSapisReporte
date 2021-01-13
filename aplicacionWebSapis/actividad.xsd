@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="actividad" targetNamespace="http://tempuri.org/actividad.xsd" xmlns:mstns="http://tempuri.org/actividad.xsd" xmlns="http://tempuri.org/actividad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Valor" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Valor (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.aplicacionWebSapis.Properties.Settings.GlobalReference.Default.Valor" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="actividadTableAdapter" GeneratorDataComponentClassName="actividadTableAdapter" Name="actividad" UserDataComponentName="actividadTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Valor (Settings)" DbObjectName="BD_SAPIS.dbo.actividad" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillActividad" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataActividad" GeneratorSourceName="FillActividad" GetMethodModifier="Public" GetMethodName="GetDataActividad" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataActividad" UserSourceName="FillActividad">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        actividad.*
+FROM            actividad</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nombre_actividad" DataSetColumn="nombre_actividad" />
+              <Mapping SourceColumn="criterio_evalucion" DataSetColumn="criterio_evalucion" />
+              <Mapping SourceColumn="objetivo_especifico" DataSetColumn="objetivo_especifico" />
+              <Mapping SourceColumn="id_objetivo_especifico" DataSetColumn="id_objetivo_especifico" />
+              <Mapping SourceColumn="fecha_inicio" DataSetColumn="fecha_inicio" />
+              <Mapping SourceColumn="fecha_fin" DataSetColumn="fecha_fin" />
+              <Mapping SourceColumn="horas" DataSetColumn="horas" />
+              <Mapping SourceColumn="periodo" DataSetColumn="periodo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="actividad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="actividad" msprop:Generator_UserDSName="actividad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="actividad" msprop:Generator_TableClassName="actividadDataTable" msprop:Generator_TableVarName="tableactividad" msprop:Generator_TablePropName="_actividad" msprop:Generator_RowDeletingName="actividadRowDeleting" msprop:Generator_RowChangingName="actividadRowChanging" msprop:Generator_RowEvHandlerName="actividadRowChangeEventHandler" msprop:Generator_RowDeletedName="actividadRowDeleted" msprop:Generator_UserTableName="actividad" msprop:Generator_RowChangedName="actividadRowChanged" msprop:Generator_RowEvArgName="actividadRowChangeEvent" msprop:Generator_RowClassName="actividadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:decimal" />
+              <xs:element name="nombre_actividad" msprop:Generator_ColumnVarNameInTable="columnnombre_actividad" msprop:Generator_ColumnPropNameInRow="nombre_actividad" msprop:Generator_ColumnPropNameInTable="nombre_actividadColumn" msprop:Generator_UserColumnName="nombre_actividad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="criterio_evalucion" msprop:Generator_ColumnVarNameInTable="columncriterio_evalucion" msprop:Generator_ColumnPropNameInRow="criterio_evalucion" msprop:Generator_ColumnPropNameInTable="criterio_evalucionColumn" msprop:Generator_UserColumnName="criterio_evalucion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="objetivo_especifico" msprop:Generator_ColumnVarNameInTable="columnobjetivo_especifico" msprop:Generator_ColumnPropNameInRow="objetivo_especifico" msprop:Generator_ColumnPropNameInTable="objetivo_especificoColumn" msprop:Generator_UserColumnName="objetivo_especifico" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_objetivo_especifico" msprop:Generator_ColumnVarNameInTable="columnid_objetivo_especifico" msprop:Generator_ColumnPropNameInRow="id_objetivo_especifico" msprop:Generator_ColumnPropNameInTable="id_objetivo_especificoColumn" msprop:Generator_UserColumnName="id_objetivo_especifico" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha_inicio" msprop:Generator_ColumnVarNameInTable="columnfecha_inicio" msprop:Generator_ColumnPropNameInRow="fecha_inicio" msprop:Generator_ColumnPropNameInTable="fecha_inicioColumn" msprop:Generator_UserColumnName="fecha_inicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fecha_fin" msprop:Generator_ColumnVarNameInTable="columnfecha_fin" msprop:Generator_ColumnPropNameInRow="fecha_fin" msprop:Generator_ColumnPropNameInTable="fecha_finColumn" msprop:Generator_UserColumnName="fecha_fin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="horas" msprop:Generator_ColumnVarNameInTable="columnhoras" msprop:Generator_ColumnPropNameInRow="horas" msprop:Generator_ColumnPropNameInTable="horasColumn" msprop:Generator_UserColumnName="horas" type="xs:decimal" minOccurs="0" />
+              <xs:element name="periodo" msprop:Generator_ColumnVarNameInTable="columnperiodo" msprop:Generator_ColumnPropNameInRow="periodo" msprop:Generator_ColumnPropNameInTable="periodoColumn" msprop:Generator_UserColumnName="periodo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:actividad" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

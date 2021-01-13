@@ -149,32 +149,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Actividades.xsc">
-      <DependentUpon>Actividades.xsd</DependentUpon>
+    <Content Include="actividad.xsc">
+      <DependentUpon>actividad.xsd</DependentUpon>
     </Content>
-    <None Include="Actividades.xsd">
+    <None Include="actividad.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Actividades.Designer.cs</LastGenOutput>
+      <LastGenOutput>actividad.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Actividades.xss">
-      <DependentUpon>Actividades.xsd</DependentUpon>
+    <Content Include="actividad.xss">
+      <DependentUpon>actividad.xsd</DependentUpon>
     </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="pruebaconexion.xsc">
-      <DependentUpon>pruebaconexion.xsd</DependentUpon>
-    </Content>
-    <None Include="pruebaconexion.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pruebaconexion.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="pruebaconexion.xss">
-      <DependentUpon>pruebaconexion.xsd</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -224,10 +213,10 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actividades.Designer.cs">
+    <Compile Include="actividad.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Actividades.xsd</DependentUpon>
+      <DependentUpon>actividad.xsd</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -260,11 +249,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="pruebaconexion.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pruebaconexion.xsd</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

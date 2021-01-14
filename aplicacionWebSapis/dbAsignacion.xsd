@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbAsignacion" targetNamespace="http://tempuri.org/dbAsignacion.xsd" xmlns:mstns="http://tempuri.org/dbAsignacion.xsd" xmlns="http://tempuri.org/dbAsignacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Valor" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Valor (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.aplicacionWebSapis.Properties.Settings.GlobalReference.Default.Valor" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="asignacionTableAdapter" GeneratorDataComponentClassName="asignacionTableAdapter" Name="asignacion" UserDataComponentName="asignacionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Valor (Settings)" DbObjectName="BD_SAPIS.dbo.asignacion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillAsignacion" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataAsignacion" GeneratorSourceName="FillAsignacion" GetMethodModifier="Public" GetMethodName="GetDataAsignacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataAsignacion" UserSourceName="FillAsignacion">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        asignacion.*
+FROM            asignacion WHERE periodo_actual = 'Periodo 2020-2'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="nombre_vinculacion" DataSetColumn="nombre_vinculacion" />
+              <Mapping SourceColumn="correo_estudiante" DataSetColumn="correo_estudiante" />
+              <Mapping SourceColumn="correo_docente" DataSetColumn="correo_docente" />
+              <Mapping SourceColumn="nombre_estudiante" DataSetColumn="nombre_estudiante" />
+              <Mapping SourceColumn="codigo_vinculacion" DataSetColumn="codigo_vinculacion" />
+              <Mapping SourceColumn="nombre_proyecto" DataSetColumn="nombre_proyecto" />
+              <Mapping SourceColumn="id_proyecto" DataSetColumn="id_proyecto" />
+              <Mapping SourceColumn="nombre_docente" DataSetColumn="nombre_docente" />
+              <Mapping SourceColumn="correo_presidente" DataSetColumn="correo_presidente" />
+              <Mapping SourceColumn="hora_planificacion" DataSetColumn="hora_planificacion" />
+              <Mapping SourceColumn="facultad" DataSetColumn="facultad" />
+              <Mapping SourceColumn="cedula_docente" DataSetColumn="cedula_docente" />
+              <Mapping SourceColumn="id_periodo" DataSetColumn="id_periodo" />
+              <Mapping SourceColumn="periodo_actual" DataSetColumn="periodo_actual" />
+              <Mapping SourceColumn="correo_lider" DataSetColumn="correo_lider" />
+              <Mapping SourceColumn="promedio_proyecto" DataSetColumn="promedio_proyecto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbAsignacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbAsignacion" msprop:Generator_UserDSName="dbAsignacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="asignacion" msprop:Generator_TableClassName="asignacionDataTable" msprop:Generator_TableVarName="tableasignacion" msprop:Generator_RowChangedName="asignacionRowChanged" msprop:Generator_TablePropName="asignacion" msprop:Generator_RowDeletingName="asignacionRowDeleting" msprop:Generator_RowChangingName="asignacionRowChanging" msprop:Generator_RowEvHandlerName="asignacionRowChangeEventHandler" msprop:Generator_RowDeletedName="asignacionRowDeleted" msprop:Generator_RowClassName="asignacionRow" msprop:Generator_UserTableName="asignacion" msprop:Generator_RowEvArgName="asignacionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="nombre_vinculacion" msprop:Generator_ColumnVarNameInTable="columnnombre_vinculacion" msprop:Generator_ColumnPropNameInRow="nombre_vinculacion" msprop:Generator_ColumnPropNameInTable="nombre_vinculacionColumn" msprop:Generator_UserColumnName="nombre_vinculacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo_estudiante" msprop:Generator_ColumnVarNameInTable="columncorreo_estudiante" msprop:Generator_ColumnPropNameInRow="correo_estudiante" msprop:Generator_ColumnPropNameInTable="correo_estudianteColumn" msprop:Generator_UserColumnName="correo_estudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo_docente" msprop:Generator_ColumnVarNameInTable="columncorreo_docente" msprop:Generator_ColumnPropNameInRow="correo_docente" msprop:Generator_ColumnPropNameInTable="correo_docenteColumn" msprop:Generator_UserColumnName="correo_docente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_estudiante" msprop:Generator_ColumnVarNameInTable="columnnombre_estudiante" msprop:Generator_ColumnPropNameInRow="nombre_estudiante" msprop:Generator_ColumnPropNameInTable="nombre_estudianteColumn" msprop:Generator_UserColumnName="nombre_estudiante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo_vinculacion" msprop:Generator_ColumnVarNameInTable="columncodigo_vinculacion" msprop:Generator_ColumnPropNameInRow="codigo_vinculacion" msprop:Generator_ColumnPropNameInTable="codigo_vinculacionColumn" msprop:Generator_UserColumnName="codigo_vinculacion" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre_proyecto" msprop:Generator_ColumnVarNameInTable="columnnombre_proyecto" msprop:Generator_ColumnPropNameInRow="nombre_proyecto" msprop:Generator_ColumnPropNameInTable="nombre_proyectoColumn" msprop:Generator_UserColumnName="nombre_proyecto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_proyecto" msprop:Generator_ColumnVarNameInTable="columnid_proyecto" msprop:Generator_ColumnPropNameInRow="id_proyecto" msprop:Generator_ColumnPropNameInTable="id_proyectoColumn" msprop:Generator_UserColumnName="id_proyecto" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre_docente" msprop:Generator_ColumnVarNameInTable="columnnombre_docente" msprop:Generator_ColumnPropNameInRow="nombre_docente" msprop:Generator_ColumnPropNameInTable="nombre_docenteColumn" msprop:Generator_UserColumnName="nombre_docente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo_presidente" msprop:Generator_ColumnVarNameInTable="columncorreo_presidente" msprop:Generator_ColumnPropNameInRow="correo_presidente" msprop:Generator_ColumnPropNameInTable="correo_presidenteColumn" msprop:Generator_UserColumnName="correo_presidente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora_planificacion" msprop:Generator_ColumnVarNameInTable="columnhora_planificacion" msprop:Generator_ColumnPropNameInRow="hora_planificacion" msprop:Generator_ColumnPropNameInTable="hora_planificacionColumn" msprop:Generator_UserColumnName="hora_planificacion" type="xs:int" minOccurs="0" />
+              <xs:element name="facultad" msprop:Generator_ColumnVarNameInTable="columnfacultad" msprop:Generator_ColumnPropNameInRow="facultad" msprop:Generator_ColumnPropNameInTable="facultadColumn" msprop:Generator_UserColumnName="facultad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cedula_docente" msprop:Generator_ColumnVarNameInTable="columncedula_docente" msprop:Generator_ColumnPropNameInRow="cedula_docente" msprop:Generator_ColumnPropNameInTable="cedula_docenteColumn" msprop:Generator_UserColumnName="cedula_docente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_periodo" msprop:Generator_ColumnVarNameInTable="columnid_periodo" msprop:Generator_ColumnPropNameInRow="id_periodo" msprop:Generator_ColumnPropNameInTable="id_periodoColumn" msprop:Generator_UserColumnName="id_periodo" type="xs:int" minOccurs="0" />
+              <xs:element name="periodo_actual" msprop:Generator_ColumnVarNameInTable="columnperiodo_actual" msprop:Generator_ColumnPropNameInRow="periodo_actual" msprop:Generator_ColumnPropNameInTable="periodo_actualColumn" msprop:Generator_UserColumnName="periodo_actual" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo_lider" msprop:Generator_ColumnVarNameInTable="columncorreo_lider" msprop:Generator_ColumnPropNameInRow="correo_lider" msprop:Generator_ColumnPropNameInTable="correo_liderColumn" msprop:Generator_UserColumnName="correo_lider" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="promedio_proyecto" msprop:Generator_ColumnVarNameInTable="columnpromedio_proyecto" msprop:Generator_ColumnPropNameInRow="promedio_proyecto" msprop:Generator_ColumnPropNameInTable="promedio_proyectoColumn" msprop:Generator_UserColumnName="promedio_proyecto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:asignacion" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

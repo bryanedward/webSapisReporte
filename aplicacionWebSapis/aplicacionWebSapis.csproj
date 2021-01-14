@@ -160,6 +160,17 @@
     <Content Include="actividad.xss">
       <DependentUpon>actividad.xsd</DependentUpon>
     </Content>
+    <Content Include="dbAsignacion.xsc">
+      <DependentUpon>dbAsignacion.xsd</DependentUpon>
+    </Content>
+    <None Include="dbAsignacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbAsignacion.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dbAsignacion.xss">
+      <DependentUpon>dbAsignacion.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,6 +245,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dbAsignacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbAsignacion.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,6 +291,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

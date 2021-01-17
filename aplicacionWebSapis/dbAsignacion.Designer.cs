@@ -283,8 +283,6 @@ namespace aplicacionWebSapis {
             
             private global::System.Data.DataColumn columnnombre_vinculacion;
             
-            private global::System.Data.DataColumn columncorreo_estudiante;
-            
             private global::System.Data.DataColumn columncorreo_docente;
             
             private global::System.Data.DataColumn columnnombre_estudiante;
@@ -314,10 +312,6 @@ namespace aplicacionWebSapis {
             private global::System.Data.DataColumn columnpromedio_proyecto;
             
             private global::System.Data.DataColumn columncorreo_est;
-            
-            private global::System.Data.DataColumn columncorreo_est_uni;
-            
-            private global::System.Data.DataColumn columnfacultad_est;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -365,14 +359,6 @@ namespace aplicacionWebSapis {
             public global::System.Data.DataColumn nombre_vinculacionColumn {
                 get {
                     return this.columnnombre_vinculacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn correo_estudianteColumn {
-                get {
-                    return this.columncorreo_estudiante;
                 }
             }
             
@@ -498,22 +484,6 @@ namespace aplicacionWebSapis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn correo_est_uniColumn {
-                get {
-                    return this.columncorreo_est_uni;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn facultad_estColumn {
-                get {
-                    return this.columnfacultad_est;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -552,7 +522,6 @@ namespace aplicacionWebSapis {
             public asignacionRow AddasignacionRow(
                         int id, 
                         string nombre_vinculacion, 
-                        string correo_estudiante, 
                         string correo_docente, 
                         string nombre_estudiante, 
                         int codigo_vinculacion, 
@@ -567,14 +536,11 @@ namespace aplicacionWebSapis {
                         string periodo_actual, 
                         string correo_lider, 
                         decimal promedio_proyecto, 
-                        string correo_est, 
-                        string correo_est_uni, 
-                        string facultad_est) {
+                        string correo_est) {
                 asignacionRow rowasignacionRow = ((asignacionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         nombre_vinculacion,
-                        correo_estudiante,
                         correo_docente,
                         nombre_estudiante,
                         codigo_vinculacion,
@@ -589,9 +555,7 @@ namespace aplicacionWebSapis {
                         periodo_actual,
                         correo_lider,
                         promedio_proyecto,
-                        correo_est,
-                        correo_est_uni,
-                        facultad_est};
+                        correo_est};
                 rowasignacionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowasignacionRow);
                 return rowasignacionRow;
@@ -623,7 +587,6 @@ namespace aplicacionWebSapis {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columnnombre_vinculacion = base.Columns["nombre_vinculacion"];
-                this.columncorreo_estudiante = base.Columns["correo_estudiante"];
                 this.columncorreo_docente = base.Columns["correo_docente"];
                 this.columnnombre_estudiante = base.Columns["nombre_estudiante"];
                 this.columncodigo_vinculacion = base.Columns["codigo_vinculacion"];
@@ -639,8 +602,6 @@ namespace aplicacionWebSapis {
                 this.columncorreo_lider = base.Columns["correo_lider"];
                 this.columnpromedio_proyecto = base.Columns["promedio_proyecto"];
                 this.columncorreo_est = base.Columns["correo_est"];
-                this.columncorreo_est_uni = base.Columns["correo_est_uni"];
-                this.columnfacultad_est = base.Columns["facultad_est"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -650,8 +611,6 @@ namespace aplicacionWebSapis {
                 base.Columns.Add(this.columnid);
                 this.columnnombre_vinculacion = new global::System.Data.DataColumn("nombre_vinculacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_vinculacion);
-                this.columncorreo_estudiante = new global::System.Data.DataColumn("correo_estudiante", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncorreo_estudiante);
                 this.columncorreo_docente = new global::System.Data.DataColumn("correo_docente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncorreo_docente);
                 this.columnnombre_estudiante = new global::System.Data.DataColumn("nombre_estudiante", typeof(string), null, global::System.Data.MappingType.Element);
@@ -682,16 +641,11 @@ namespace aplicacionWebSapis {
                 base.Columns.Add(this.columnpromedio_proyecto);
                 this.columncorreo_est = new global::System.Data.DataColumn("correo_est", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncorreo_est);
-                this.columncorreo_est_uni = new global::System.Data.DataColumn("correo_est_uni", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncorreo_est_uni);
-                this.columnfacultad_est = new global::System.Data.DataColumn("facultad_est", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfacultad_est);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnnombre_vinculacion.MaxLength = 255;
-                this.columncorreo_estudiante.MaxLength = 255;
                 this.columncorreo_docente.MaxLength = 255;
                 this.columnnombre_estudiante.MaxLength = 255;
                 this.columnnombre_proyecto.MaxLength = 255;
@@ -702,8 +656,6 @@ namespace aplicacionWebSapis {
                 this.columnperiodo_actual.MaxLength = 255;
                 this.columncorreo_lider.MaxLength = 255;
                 this.columncorreo_est.MaxLength = 255;
-                this.columncorreo_est_uni.MaxLength = 255;
-                this.columnfacultad_est.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -868,22 +820,6 @@ namespace aplicacionWebSapis {
                 }
                 set {
                     this[this.tableasignacion.nombre_vinculacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string correo_estudiante {
-                get {
-                    try {
-                        return ((string)(this[this.tableasignacion.correo_estudianteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo_estudiante\' de la tabla \'asignacion\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableasignacion.correo_estudianteColumn] = value;
                 }
             }
             
@@ -1129,38 +1065,6 @@ namespace aplicacionWebSapis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string correo_est_uni {
-                get {
-                    try {
-                        return ((string)(this[this.tableasignacion.correo_est_uniColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo_est_uni\' de la tabla \'asignacion\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableasignacion.correo_est_uniColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string facultad_est {
-                get {
-                    try {
-                        return ((string)(this[this.tableasignacion.facultad_estColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'facultad_est\' de la tabla \'asignacion\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableasignacion.facultad_estColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isnombre_vinculacionNull() {
                 return this.IsNull(this.tableasignacion.nombre_vinculacionColumn);
             }
@@ -1169,18 +1073,6 @@ namespace aplicacionWebSapis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnombre_vinculacionNull() {
                 this[this.tableasignacion.nombre_vinculacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iscorreo_estudianteNull() {
-                return this.IsNull(this.tableasignacion.correo_estudianteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcorreo_estudianteNull() {
-                this[this.tableasignacion.correo_estudianteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1362,30 +1254,6 @@ namespace aplicacionWebSapis {
             public void Setcorreo_estNull() {
                 this[this.tableasignacion.correo_estColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iscorreo_est_uniNull() {
-                return this.IsNull(this.tableasignacion.correo_est_uniColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcorreo_est_uniNull() {
-                this[this.tableasignacion.correo_est_uniColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfacultad_estNull() {
-                return this.IsNull(this.tableasignacion.facultad_estColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfacultad_estNull() {
-                this[this.tableasignacion.facultad_estColumn] = global::System.Convert.DBNull;
-            }
         }
         
         /// <summary>
@@ -1549,7 +1417,6 @@ namespace aplicacionWebSapis.dbAsignacionTableAdapters {
             tableMapping.DataSetTable = "asignacion";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("nombre_vinculacion", "nombre_vinculacion");
-            tableMapping.ColumnMappings.Add("correo_estudiante", "correo_estudiante");
             tableMapping.ColumnMappings.Add("correo_docente", "correo_docente");
             tableMapping.ColumnMappings.Add("nombre_estudiante", "nombre_estudiante");
             tableMapping.ColumnMappings.Add("codigo_vinculacion", "codigo_vinculacion");
@@ -1565,8 +1432,6 @@ namespace aplicacionWebSapis.dbAsignacionTableAdapters {
             tableMapping.ColumnMappings.Add("correo_lider", "correo_lider");
             tableMapping.ColumnMappings.Add("promedio_proyecto", "promedio_proyecto");
             tableMapping.ColumnMappings.Add("correo_est", "correo_est");
-            tableMapping.ColumnMappings.Add("correo_est_uni", "correo_est_uni");
-            tableMapping.ColumnMappings.Add("facultad_est", "facultad_est");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1583,8 +1448,8 @@ namespace aplicacionWebSapis.dbAsignacionTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        id, nombre_vinculacion, correo_est, correo_docente, correo_est_uni, codigo_vinculacion, nombre_proyecto, id_proyecto, nombre_docente, correo_presidente, hora_planificacion, facultad, cedula_docente, id_periodo, 
-                         periodo_actual, correo_lider, promedio_proyecto, facultad_est
+            this._commandCollection[0].CommandText = @"SELECT        TOP (1) id, nombre_vinculacion, correo_est, correo_docente, nombre_estudiante, codigo_vinculacion, nombre_proyecto, id_proyecto, nombre_docente, correo_presidente, hora_planificacion, facultad, cedula_docente, 
+                         id_periodo, periodo_actual, correo_lider, promedio_proyecto
 FROM            asignacion
 WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;

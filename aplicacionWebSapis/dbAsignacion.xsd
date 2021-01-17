@@ -12,8 +12,8 @@
               <DbSource ConnectionRef="Valor (Settings)" DbObjectName="BD_SAPIS.dbo.asignacion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillAsignacion" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataAsignacion" GeneratorSourceName="FillAsignacion" GetMethodModifier="Public" GetMethodName="GetDataAsignacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataAsignacion" UserSourceName="FillAsignacion">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        id, nombre_vinculacion, correo_est, correo_docente, correo_est_uni, codigo_vinculacion, nombre_proyecto, id_proyecto, nombre_docente, correo_presidente, hora_planificacion, facultad, cedula_docente, id_periodo, 
-                         periodo_actual, correo_lider, promedio_proyecto, facultad_est
+                    <CommandText>SELECT        TOP (1) id, nombre_vinculacion, correo_est, correo_docente, nombre_estudiante, codigo_vinculacion, nombre_proyecto, id_proyecto, nombre_docente, correo_presidente, hora_planificacion, facultad, cedula_docente, 
+                         id_periodo, periodo_actual, correo_lider, promedio_proyecto
 FROM            asignacion
 WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)</CommandText>
                     <Parameters>
@@ -26,7 +26,6 @@ WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)<
             <Mappings>
               <Mapping SourceColumn="id" DataSetColumn="id" />
               <Mapping SourceColumn="nombre_vinculacion" DataSetColumn="nombre_vinculacion" />
-              <Mapping SourceColumn="correo_estudiante" DataSetColumn="correo_estudiante" />
               <Mapping SourceColumn="correo_docente" DataSetColumn="correo_docente" />
               <Mapping SourceColumn="nombre_estudiante" DataSetColumn="nombre_estudiante" />
               <Mapping SourceColumn="codigo_vinculacion" DataSetColumn="codigo_vinculacion" />
@@ -42,8 +41,6 @@ WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)<
               <Mapping SourceColumn="correo_lider" DataSetColumn="correo_lider" />
               <Mapping SourceColumn="promedio_proyecto" DataSetColumn="promedio_proyecto" />
               <Mapping SourceColumn="correo_est" DataSetColumn="correo_est" />
-              <Mapping SourceColumn="correo_est_uni" DataSetColumn="correo_est_uni" />
-              <Mapping SourceColumn="facultad_est" DataSetColumn="facultad_est" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -55,18 +52,11 @@ WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)<
   <xs:element name="dbAsignacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbAsignacion" msprop:Generator_UserDSName="dbAsignacion">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="asignacion" msprop:Generator_TableClassName="asignacionDataTable" msprop:Generator_TableVarName="tableasignacion" msprop:Generator_RowChangedName="asignacionRowChanged" msprop:Generator_TablePropName="asignacion" msprop:Generator_RowDeletingName="asignacionRowDeleting" msprop:Generator_RowChangingName="asignacionRowChanging" msprop:Generator_RowEvHandlerName="asignacionRowChangeEventHandler" msprop:Generator_RowDeletedName="asignacionRowDeleted" msprop:Generator_RowClassName="asignacionRow" msprop:Generator_UserTableName="asignacion" msprop:Generator_RowEvArgName="asignacionRowChangeEvent">
+        <xs:element name="asignacion" msprop:Generator_TableClassName="asignacionDataTable" msprop:Generator_TableVarName="tableasignacion" msprop:Generator_TablePropName="asignacion" msprop:Generator_RowDeletingName="asignacionRowDeleting" msprop:Generator_RowChangingName="asignacionRowChanging" msprop:Generator_RowEvHandlerName="asignacionRowChangeEventHandler" msprop:Generator_RowDeletedName="asignacionRowDeleted" msprop:Generator_UserTableName="asignacion" msprop:Generator_RowChangedName="asignacionRowChanged" msprop:Generator_RowEvArgName="asignacionRowChangeEvent" msprop:Generator_RowClassName="asignacionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
               <xs:element name="nombre_vinculacion" msprop:Generator_ColumnVarNameInTable="columnnombre_vinculacion" msprop:Generator_ColumnPropNameInRow="nombre_vinculacion" msprop:Generator_ColumnPropNameInTable="nombre_vinculacionColumn" msprop:Generator_UserColumnName="nombre_vinculacion" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="correo_estudiante" msprop:Generator_ColumnVarNameInTable="columncorreo_estudiante" msprop:Generator_ColumnPropNameInRow="correo_estudiante" msprop:Generator_ColumnPropNameInTable="correo_estudianteColumn" msprop:Generator_UserColumnName="correo_estudiante" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -142,20 +132,6 @@ WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)<
               </xs:element>
               <xs:element name="promedio_proyecto" msprop:Generator_ColumnVarNameInTable="columnpromedio_proyecto" msprop:Generator_ColumnPropNameInRow="promedio_proyecto" msprop:Generator_ColumnPropNameInTable="promedio_proyectoColumn" msprop:Generator_UserColumnName="promedio_proyecto" type="xs:decimal" minOccurs="0" />
               <xs:element name="correo_est" msprop:Generator_ColumnVarNameInTable="columncorreo_est" msprop:Generator_ColumnPropNameInRow="correo_est" msprop:Generator_ColumnPropNameInTable="correo_estColumn" msprop:Generator_UserColumnName="correo_est" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="correo_est_uni" msprop:Generator_ColumnVarNameInTable="columncorreo_est_uni" msprop:Generator_ColumnPropNameInRow="correo_est_uni" msprop:Generator_ColumnPropNameInTable="correo_est_uniColumn" msprop:Generator_UserColumnName="correo_est_uni" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="facultad_est" msprop:Generator_ColumnVarNameInTable="columnfacultad_est" msprop:Generator_ColumnPropNameInRow="facultad_est" msprop:Generator_ColumnPropNameInTable="facultad_estColumn" msprop:Generator_UserColumnName="facultad_est" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />

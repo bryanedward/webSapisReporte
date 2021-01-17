@@ -20,6 +20,9 @@
             <DataSources>
                 <rsweb:ReportDataSource DataSourceId="data" Name="DataSetListPregunta" />
             </DataSources>
+            <DataSources>
+                <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSetAsignacion" />
+            </DataSources>
         </LocalReport>
     </rsweb:ReportViewer>
 
@@ -29,5 +32,7 @@
             OldValuesParameterFormatString="original_{0}" 
             SelectMethod="GetDataListaPregunta" 
             TypeName="aplicacionWebSapis.lista_preguntaTableAdapters.DataTable1TableAdapter"></asp:ObjectDataSource>
+
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAsignacion" TypeName="aplicacionWebSapis.dbAsignacionTableAdapters.asignacionTableAdapter"></asp:ObjectDataSource>
    </div>
 </asp:Content>

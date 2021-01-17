@@ -13,7 +13,7 @@ namespace aplicacionWebSapis
         {
             if (!IsPostBack)
             {
-                this.ReportViewer1.LocalReport.Refresh();
+                
             }
         }
     }

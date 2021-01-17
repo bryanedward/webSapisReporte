@@ -18,14 +18,16 @@
         ToolBarItemPressedHoverBackColor="153, 187, 226" Height="1007px" Width="100%">
         <LocalReport ReportPath="Reportes\Report2.rdlc">
             <DataSources>
-                <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSetAsignacion" />
+                <rsweb:ReportDataSource DataSourceId="data" Name="DataSetListPregunta" />
             </DataSources>
         </LocalReport>
     </rsweb:ReportViewer>
 
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
-        OldValuesParameterFormatString="original_{0}" 
-        SelectMethod="GetDataAsignacion" 
-        TypeName="aplicacionWebSapis.dbAsignacionTableAdapters.asignacionTableAdapter"></asp:ObjectDataSource>
-    </div>
+        <asp:ObjectDataSource 
+           id="data"
+            runat="server" 
+            OldValuesParameterFormatString="original_{0}" 
+            SelectMethod="GetDataListaPregunta" 
+            TypeName="aplicacionWebSapis.lista_preguntaTableAdapters.DataTable1TableAdapter"></asp:ObjectDataSource>
+   </div>
 </asp:Content>

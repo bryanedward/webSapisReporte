@@ -149,17 +149,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="actividad.xsc">
-      <DependentUpon>actividad.xsd</DependentUpon>
-    </Content>
-    <None Include="actividad.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>actividad.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="actividad.xss">
-      <DependentUpon>actividad.xsd</DependentUpon>
-    </Content>
     <Content Include="dbAsignacion.xsc">
       <DependentUpon>dbAsignacion.xsd</DependentUpon>
     </Content>
@@ -170,6 +159,17 @@
     </None>
     <Content Include="dbAsignacion.xss">
       <DependentUpon>dbAsignacion.xsd</DependentUpon>
+    </Content>
+    <Content Include="lista_pregunta.xsc">
+      <DependentUpon>lista_pregunta.xsd</DependentUpon>
+    </Content>
+    <None Include="lista_pregunta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lista_pregunta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="lista_pregunta.xss">
+      <DependentUpon>lista_pregunta.xsd</DependentUpon>
     </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,11 +224,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="actividad.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>actividad.xsd</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -260,6 +255,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="lista_pregunta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lista_pregunta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -290,7 +290,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="lista_pregunta" targetNamespace="http://tempuri.org/lista_pregunta.xsd" xmlns:mstns="http://tempuri.org/lista_pregunta.xsd" xmlns="http://tempuri.org/lista_pregunta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Valor" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Valor (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.aplicacionWebSapis.Properties.Settings.GlobalReference.Default.Valor" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Valor (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillListaPregunta" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataListaPregunta" GeneratorSourceName="FillListaPregunta" GetMethodModifier="Public" GetMethodName="GetDataListaPregunta" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataListaPregunta" UserSourceName="FillListaPregunta">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select titulo_pregunta, pregunta, deficiencia, bueno , excelente,  titulo_result,
+nota_est from pregunta_estud inner join 
+lista_pregunta  on lista_pregunta.pregunta_id = pregunta_estud.id_item_pregunt
+inner join respuesta_lista_pregunta on respuesta_lista_pregunta.id_formulario
+= lista_pregunta.id inner join result_pregunt on result_pregunt.id_pregunt
+= pregunta_estud.id where respuesta_lista_pregunta.email_usuario = 'e1315002236@live.uleam.edu.ec'
+group by  titulo_pregunta, pregunta, deficiencia, bueno, excelente, nota_est, titulo_result</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="pregunta" DataSetColumn="pregunta" />
+              <Mapping SourceColumn="titulo_pregunta" DataSetColumn="titulo_pregunta" />
+              <Mapping SourceColumn="deficiencia" DataSetColumn="deficiencia" />
+              <Mapping SourceColumn="bueno" DataSetColumn="bueno" />
+              <Mapping SourceColumn="excelente" DataSetColumn="excelente" />
+              <Mapping SourceColumn="titulo_result" DataSetColumn="titulo_result" />
+              <Mapping SourceColumn="nota_est" DataSetColumn="nota_est" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="lista_pregunta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="lista_pregunta" msprop:Generator_UserDSName="lista_pregunta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pregunta" msprop:Generator_ColumnVarNameInTable="columnpregunta" msprop:Generator_ColumnPropNameInRow="pregunta" msprop:Generator_ColumnPropNameInTable="preguntaColumn" msprop:Generator_UserColumnName="pregunta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="titulo_pregunta" msprop:Generator_ColumnVarNameInTable="columntitulo_pregunta" msprop:Generator_ColumnPropNameInRow="titulo_pregunta" msprop:Generator_ColumnPropNameInTable="titulo_preguntaColumn" msprop:Generator_UserColumnName="titulo_pregunta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="deficiencia" msprop:Generator_ColumnVarNameInTable="columndeficiencia" msprop:Generator_ColumnPropNameInRow="deficiencia" msprop:Generator_ColumnPropNameInTable="deficienciaColumn" msprop:Generator_UserColumnName="deficiencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bueno" msprop:Generator_ColumnVarNameInTable="columnbueno" msprop:Generator_ColumnPropNameInRow="bueno" msprop:Generator_ColumnPropNameInTable="buenoColumn" msprop:Generator_UserColumnName="bueno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="excelente" msprop:Generator_ColumnVarNameInTable="columnexcelente" msprop:Generator_ColumnPropNameInRow="excelente" msprop:Generator_ColumnPropNameInTable="excelenteColumn" msprop:Generator_UserColumnName="excelente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="titulo_result" msprop:Generator_ColumnVarNameInTable="columntitulo_result" msprop:Generator_ColumnPropNameInRow="titulo_result" msprop:Generator_ColumnPropNameInTable="titulo_resultColumn" msprop:Generator_UserColumnName="titulo_result" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nota_est" msprop:Generator_ColumnVarNameInTable="columnnota_est" msprop:Generator_ColumnPropNameInRow="nota_est" msprop:Generator_ColumnPropNameInTable="nota_estColumn" msprop:Generator_UserColumnName="nota_est" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -20,17 +20,17 @@ namespace aplicacionWebSapis {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("actividad")]
+    [global::System.Xml.Serialization.XmlRootAttribute("lista_pregunta")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class actividad : global::System.Data.DataSet {
+    public partial class lista_pregunta : global::System.Data.DataSet {
         
-        private actividadDataTable tableactividad;
+        private DataTable1DataTable tableDataTable1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public actividad() {
+        public lista_pregunta() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace aplicacionWebSapis {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected actividad(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected lista_pregunta(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace aplicacionWebSapis {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["actividad"] != null)) {
-                    base.Tables.Add(new actividadDataTable(ds.Tables["actividad"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace aplicacionWebSapis {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public actividadDataTable _actividad {
+        public DataTable1DataTable DataTable1 {
             get {
-                return this.tableactividad;
+                return this.tableDataTable1;
             }
         }
         
@@ -127,7 +127,7 @@ namespace aplicacionWebSapis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            actividad cln = ((actividad)(base.Clone()));
+            lista_pregunta cln = ((lista_pregunta)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace aplicacionWebSapis {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["actividad"] != null)) {
-                    base.Tables.Add(new actividadDataTable(ds.Tables["actividad"]));
+                if ((ds.Tables["DataTable1"] != null)) {
+                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace aplicacionWebSapis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableactividad = ((actividadDataTable)(base.Tables["actividad"]));
+            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
             if ((initTable == true)) {
-                if ((this.tableactividad != null)) {
-                    this.tableactividad.InitVars();
+                if ((this.tableDataTable1 != null)) {
+                    this.tableDataTable1.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace aplicacionWebSapis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "actividad";
+            this.DataSetName = "lista_pregunta";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/actividad.xsd";
+            this.Namespace = "http://tempuri.org/lista_pregunta.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableactividad = new actividadDataTable();
-            base.Tables.Add(this.tableactividad);
+            this.tableDataTable1 = new DataTable1DataTable();
+            base.Tables.Add(this.tableDataTable1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerialize_actividad() {
+        private bool ShouldSerializeDataTable1() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace aplicacionWebSapis {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            actividad ds = new actividad();
+            lista_pregunta ds = new lista_pregunta();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,33 @@ namespace aplicacionWebSapis {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void actividadRowChangeEventHandler(object sender, actividadRowChangeEvent e);
+        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class actividadDataTable : global::System.Data.TypedTableBase<actividadRow> {
+        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnpregunta;
             
-            private global::System.Data.DataColumn columnnombre_actividad;
+            private global::System.Data.DataColumn columntitulo_pregunta;
             
-            private global::System.Data.DataColumn columncriterio_evalucion;
+            private global::System.Data.DataColumn columndeficiencia;
             
-            private global::System.Data.DataColumn columnobjetivo_especifico;
+            private global::System.Data.DataColumn columnbueno;
             
-            private global::System.Data.DataColumn columnid_objetivo_especifico;
+            private global::System.Data.DataColumn columnexcelente;
             
-            private global::System.Data.DataColumn columnfecha_inicio;
+            private global::System.Data.DataColumn columntitulo_result;
             
-            private global::System.Data.DataColumn columnfecha_fin;
-            
-            private global::System.Data.DataColumn columnhoras;
-            
-            private global::System.Data.DataColumn columnperiodo;
+            private global::System.Data.DataColumn columnnota_est;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadDataTable() {
-                this.TableName = "actividad";
+            public DataTable1DataTable() {
+                this.TableName = "DataTable1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +304,7 @@ namespace aplicacionWebSapis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal actividadDataTable(global::System.Data.DataTable table) {
+            internal DataTable1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,80 +321,64 @@ namespace aplicacionWebSapis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected actividadDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn preguntaColumn {
                 get {
-                    return this.columnid;
+                    return this.columnpregunta;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombre_actividadColumn {
+            public global::System.Data.DataColumn titulo_preguntaColumn {
                 get {
-                    return this.columnnombre_actividad;
+                    return this.columntitulo_pregunta;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn criterio_evalucionColumn {
+            public global::System.Data.DataColumn deficienciaColumn {
                 get {
-                    return this.columncriterio_evalucion;
+                    return this.columndeficiencia;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn objetivo_especificoColumn {
+            public global::System.Data.DataColumn buenoColumn {
                 get {
-                    return this.columnobjetivo_especifico;
+                    return this.columnbueno;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_objetivo_especificoColumn {
+            public global::System.Data.DataColumn excelenteColumn {
                 get {
-                    return this.columnid_objetivo_especifico;
+                    return this.columnexcelente;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_inicioColumn {
+            public global::System.Data.DataColumn titulo_resultColumn {
                 get {
-                    return this.columnfecha_inicio;
+                    return this.columntitulo_result;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_finColumn {
+            public global::System.Data.DataColumn nota_estColumn {
                 get {
-                    return this.columnfecha_fin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn horasColumn {
-                get {
-                    return this.columnhoras;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn periodoColumn {
-                get {
-                    return this.columnperiodo;
+                    return this.columnnota_est;
                 }
             }
             
@@ -413,60 +393,51 @@ namespace aplicacionWebSapis {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRow this[int index] {
+            public DataTable1Row this[int index] {
                 get {
-                    return ((actividadRow)(this.Rows[index]));
+                    return ((DataTable1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event actividadRowChangeEventHandler actividadRowChanging;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event actividadRowChangeEventHandler actividadRowChanged;
+            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event actividadRowChangeEventHandler actividadRowDeleting;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event actividadRowChangeEventHandler actividadRowDeleted;
+            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddactividadRow(actividadRow row) {
+            public void AddDataTable1Row(DataTable1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRow AddactividadRow(decimal id, string nombre_actividad, string criterio_evalucion, string objetivo_especifico, int id_objetivo_especifico, System.DateTime fecha_inicio, System.DateTime fecha_fin, decimal horas, string periodo) {
-                actividadRow rowactividadRow = ((actividadRow)(this.NewRow()));
+            public DataTable1Row AddDataTable1Row(string pregunta, string titulo_pregunta, string deficiencia, string bueno, string excelente, string titulo_result, decimal nota_est) {
+                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
-                        nombre_actividad,
-                        criterio_evalucion,
-                        objetivo_especifico,
-                        id_objetivo_especifico,
-                        fecha_inicio,
-                        fecha_fin,
-                        horas,
-                        periodo};
-                rowactividadRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowactividadRow);
-                return rowactividadRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRow FindByid(decimal id) {
-                return ((actividadRow)(this.Rows.Find(new object[] {
-                            id})));
+                        pregunta,
+                        titulo_pregunta,
+                        deficiencia,
+                        bueno,
+                        excelente,
+                        titulo_result,
+                        nota_est};
+                rowDataTable1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTable1Row);
+                return rowDataTable1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                actividadDataTable cln = ((actividadDataTable)(base.Clone()));
+                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -474,80 +445,70 @@ namespace aplicacionWebSapis {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new actividadDataTable();
+                return new DataTable1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columnnombre_actividad = base.Columns["nombre_actividad"];
-                this.columncriterio_evalucion = base.Columns["criterio_evalucion"];
-                this.columnobjetivo_especifico = base.Columns["objetivo_especifico"];
-                this.columnid_objetivo_especifico = base.Columns["id_objetivo_especifico"];
-                this.columnfecha_inicio = base.Columns["fecha_inicio"];
-                this.columnfecha_fin = base.Columns["fecha_fin"];
-                this.columnhoras = base.Columns["horas"];
-                this.columnperiodo = base.Columns["periodo"];
+                this.columnpregunta = base.Columns["pregunta"];
+                this.columntitulo_pregunta = base.Columns["titulo_pregunta"];
+                this.columndeficiencia = base.Columns["deficiencia"];
+                this.columnbueno = base.Columns["bueno"];
+                this.columnexcelente = base.Columns["excelente"];
+                this.columntitulo_result = base.Columns["titulo_result"];
+                this.columnnota_est = base.Columns["nota_est"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnnombre_actividad = new global::System.Data.DataColumn("nombre_actividad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_actividad);
-                this.columncriterio_evalucion = new global::System.Data.DataColumn("criterio_evalucion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncriterio_evalucion);
-                this.columnobjetivo_especifico = new global::System.Data.DataColumn("objetivo_especifico", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnobjetivo_especifico);
-                this.columnid_objetivo_especifico = new global::System.Data.DataColumn("id_objetivo_especifico", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_objetivo_especifico);
-                this.columnfecha_inicio = new global::System.Data.DataColumn("fecha_inicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_inicio);
-                this.columnfecha_fin = new global::System.Data.DataColumn("fecha_fin", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_fin);
-                this.columnhoras = new global::System.Data.DataColumn("horas", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhoras);
-                this.columnperiodo = new global::System.Data.DataColumn("periodo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnperiodo);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
-                this.columnid.AllowDBNull = false;
-                this.columnid.Unique = true;
-                this.columnnombre_actividad.MaxLength = 50;
-                this.columncriterio_evalucion.MaxLength = 50;
-                this.columnobjetivo_especifico.MaxLength = 50;
-                this.columnperiodo.MaxLength = 50;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_actividad");
-                this.ExtendedProperties.Add("Generator_UserTableName", "actividad");
+                this.columnpregunta = new global::System.Data.DataColumn("pregunta", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpregunta);
+                this.columntitulo_pregunta = new global::System.Data.DataColumn("titulo_pregunta", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntitulo_pregunta);
+                this.columndeficiencia = new global::System.Data.DataColumn("deficiencia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeficiencia);
+                this.columnbueno = new global::System.Data.DataColumn("bueno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbueno);
+                this.columnexcelente = new global::System.Data.DataColumn("excelente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexcelente);
+                this.columntitulo_result = new global::System.Data.DataColumn("titulo_result", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntitulo_result);
+                this.columnnota_est = new global::System.Data.DataColumn("nota_est", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnota_est);
+                this.columnpregunta.MaxLength = 255;
+                this.columntitulo_pregunta.MaxLength = 255;
+                this.columndeficiencia.MaxLength = 255;
+                this.columnbueno.MaxLength = 255;
+                this.columnexcelente.MaxLength = 255;
+                this.columntitulo_result.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRow NewactividadRow() {
-                return ((actividadRow)(this.NewRow()));
+            public DataTable1Row NewDataTable1Row() {
+                return ((DataTable1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new actividadRow(builder);
+                return new DataTable1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(actividadRow);
+                return typeof(DataTable1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.actividadRowChanged != null)) {
-                    this.actividadRowChanged(this, new actividadRowChangeEvent(((actividadRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanged != null)) {
+                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -555,8 +516,8 @@ namespace aplicacionWebSapis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.actividadRowChanging != null)) {
-                    this.actividadRowChanging(this, new actividadRowChangeEvent(((actividadRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowChanging != null)) {
+                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -564,8 +525,8 @@ namespace aplicacionWebSapis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.actividadRowDeleted != null)) {
-                    this.actividadRowDeleted(this, new actividadRowChangeEvent(((actividadRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleted != null)) {
+                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -573,14 +534,14 @@ namespace aplicacionWebSapis {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.actividadRowDeleting != null)) {
-                    this.actividadRowDeleting(this, new actividadRowChangeEvent(((actividadRow)(e.Row)), e.Action));
+                if ((this.DataTable1RowDeleting != null)) {
+                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveactividadRow(actividadRow row) {
+            public void RemoveDataTable1Row(DataTable1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -589,7 +550,7 @@ namespace aplicacionWebSapis {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                actividad ds = new actividad();
+                lista_pregunta ds = new lista_pregunta();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -607,7 +568,7 @@ namespace aplicacionWebSapis {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "actividadDataTable";
+                attribute2.FixedValue = "DataTable1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -651,251 +612,211 @@ namespace aplicacionWebSapis {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class actividadRow : global::System.Data.DataRow {
+        public partial class DataTable1Row : global::System.Data.DataRow {
             
-            private actividadDataTable tableactividad;
+            private DataTable1DataTable tableDataTable1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal actividadRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableactividad = ((actividadDataTable)(this.Table));
+                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal id {
-                get {
-                    return ((decimal)(this[this.tableactividad.idColumn]));
-                }
-                set {
-                    this[this.tableactividad.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre_actividad {
+            public string pregunta {
                 get {
                     try {
-                        return ((string)(this[this.tableactividad.nombre_actividadColumn]));
+                        return ((string)(this[this.tableDataTable1.preguntaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre_actividad\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pregunta\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.nombre_actividadColumn] = value;
+                    this[this.tableDataTable1.preguntaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string criterio_evalucion {
+            public string titulo_pregunta {
                 get {
                     try {
-                        return ((string)(this[this.tableactividad.criterio_evalucionColumn]));
+                        return ((string)(this[this.tableDataTable1.titulo_preguntaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'criterio_evalucion\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'titulo_pregunta\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.criterio_evalucionColumn] = value;
+                    this[this.tableDataTable1.titulo_preguntaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string objetivo_especifico {
+            public string deficiencia {
                 get {
                     try {
-                        return ((string)(this[this.tableactividad.objetivo_especificoColumn]));
+                        return ((string)(this[this.tableDataTable1.deficienciaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'objetivo_especifico\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'deficiencia\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.objetivo_especificoColumn] = value;
+                    this[this.tableDataTable1.deficienciaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id_objetivo_especifico {
+            public string bueno {
                 get {
                     try {
-                        return ((int)(this[this.tableactividad.id_objetivo_especificoColumn]));
+                        return ((string)(this[this.tableDataTable1.buenoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_objetivo_especifico\' de la tabla \'actividad\' es DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'bueno\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.id_objetivo_especificoColumn] = value;
+                    this[this.tableDataTable1.buenoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_inicio {
+            public string excelente {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableactividad.fecha_inicioColumn]));
+                        return ((string)(this[this.tableDataTable1.excelenteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_inicio\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'excelente\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.fecha_inicioColumn] = value;
+                    this[this.tableDataTable1.excelenteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_fin {
+            public string titulo_result {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableactividad.fecha_finColumn]));
+                        return ((string)(this[this.tableDataTable1.titulo_resultColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_fin\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'titulo_result\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.fecha_finColumn] = value;
+                    this[this.tableDataTable1.titulo_resultColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal horas {
+            public decimal nota_est {
                 get {
                     try {
-                        return ((decimal)(this[this.tableactividad.horasColumn]));
+                        return ((decimal)(this[this.tableDataTable1.nota_estColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'horas\' de la tabla \'actividad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nota_est\' de la tabla \'DataTable1\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableactividad.horasColumn] = value;
+                    this[this.tableDataTable1.nota_estColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string periodo {
-                get {
-                    try {
-                        return ((string)(this[this.tableactividad.periodoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'periodo\' de la tabla \'actividad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableactividad.periodoColumn] = value;
-                }
+            public bool IspreguntaNull() {
+                return this.IsNull(this.tableDataTable1.preguntaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isnombre_actividadNull() {
-                return this.IsNull(this.tableactividad.nombre_actividadColumn);
+            public void SetpreguntaNull() {
+                this[this.tableDataTable1.preguntaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setnombre_actividadNull() {
-                this[this.tableactividad.nombre_actividadColumn] = global::System.Convert.DBNull;
+            public bool Istitulo_preguntaNull() {
+                return this.IsNull(this.tableDataTable1.titulo_preguntaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iscriterio_evalucionNull() {
-                return this.IsNull(this.tableactividad.criterio_evalucionColumn);
+            public void Settitulo_preguntaNull() {
+                this[this.tableDataTable1.titulo_preguntaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcriterio_evalucionNull() {
-                this[this.tableactividad.criterio_evalucionColumn] = global::System.Convert.DBNull;
+            public bool IsdeficienciaNull() {
+                return this.IsNull(this.tableDataTable1.deficienciaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isobjetivo_especificoNull() {
-                return this.IsNull(this.tableactividad.objetivo_especificoColumn);
+            public void SetdeficienciaNull() {
+                this[this.tableDataTable1.deficienciaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setobjetivo_especificoNull() {
-                this[this.tableactividad.objetivo_especificoColumn] = global::System.Convert.DBNull;
+            public bool IsbuenoNull() {
+                return this.IsNull(this.tableDataTable1.buenoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isid_objetivo_especificoNull() {
-                return this.IsNull(this.tableactividad.id_objetivo_especificoColumn);
+            public void SetbuenoNull() {
+                this[this.tableDataTable1.buenoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setid_objetivo_especificoNull() {
-                this[this.tableactividad.id_objetivo_especificoColumn] = global::System.Convert.DBNull;
+            public bool IsexcelenteNull() {
+                return this.IsNull(this.tableDataTable1.excelenteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_inicioNull() {
-                return this.IsNull(this.tableactividad.fecha_inicioColumn);
+            public void SetexcelenteNull() {
+                this[this.tableDataTable1.excelenteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_inicioNull() {
-                this[this.tableactividad.fecha_inicioColumn] = global::System.Convert.DBNull;
+            public bool Istitulo_resultNull() {
+                return this.IsNull(this.tableDataTable1.titulo_resultColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isfecha_finNull() {
-                return this.IsNull(this.tableactividad.fecha_finColumn);
+            public void Settitulo_resultNull() {
+                this[this.tableDataTable1.titulo_resultColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setfecha_finNull() {
-                this[this.tableactividad.fecha_finColumn] = global::System.Convert.DBNull;
+            public bool Isnota_estNull() {
+                return this.IsNull(this.tableDataTable1.nota_estColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshorasNull() {
-                return this.IsNull(this.tableactividad.horasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethorasNull() {
-                this[this.tableactividad.horasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsperiodoNull() {
-                return this.IsNull(this.tableactividad.periodoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetperiodoNull() {
-                this[this.tableactividad.periodoColumn] = global::System.Convert.DBNull;
+            public void Setnota_estNull() {
+                this[this.tableDataTable1.nota_estColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -903,22 +824,22 @@ namespace aplicacionWebSapis {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class actividadRowChangeEvent : global::System.EventArgs {
+        public class DataTable1RowChangeEvent : global::System.EventArgs {
             
-            private actividadRow eventRow;
+            private DataTable1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRowChangeEvent(actividadRow row, global::System.Data.DataRowAction action) {
+            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public actividadRow Row {
+            public DataTable1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -934,7 +855,7 @@ namespace aplicacionWebSapis {
         }
     }
 }
-namespace aplicacionWebSapis.actividadTableAdapters {
+namespace aplicacionWebSapis.lista_preguntaTableAdapters {
     
     
     /// <summary>
@@ -946,7 +867,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class actividadTableAdapter : global::System.ComponentModel.Component {
+    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -960,7 +881,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public actividadTableAdapter() {
+        public DataTable1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1057,16 +978,14 @@ namespace aplicacionWebSapis.actividadTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "actividad";
-            tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("nombre_actividad", "nombre_actividad");
-            tableMapping.ColumnMappings.Add("criterio_evalucion", "criterio_evalucion");
-            tableMapping.ColumnMappings.Add("objetivo_especifico", "objetivo_especifico");
-            tableMapping.ColumnMappings.Add("id_objetivo_especifico", "id_objetivo_especifico");
-            tableMapping.ColumnMappings.Add("fecha_inicio", "fecha_inicio");
-            tableMapping.ColumnMappings.Add("fecha_fin", "fecha_fin");
-            tableMapping.ColumnMappings.Add("horas", "horas");
-            tableMapping.ColumnMappings.Add("periodo", "periodo");
+            tableMapping.DataSetTable = "DataTable1";
+            tableMapping.ColumnMappings.Add("pregunta", "pregunta");
+            tableMapping.ColumnMappings.Add("titulo_pregunta", "titulo_pregunta");
+            tableMapping.ColumnMappings.Add("deficiencia", "deficiencia");
+            tableMapping.ColumnMappings.Add("bueno", "bueno");
+            tableMapping.ColumnMappings.Add("excelente", "excelente");
+            tableMapping.ColumnMappings.Add("titulo_result", "titulo_result");
+            tableMapping.ColumnMappings.Add("nota_est", "nota_est");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1083,7 +1002,13 @@ namespace aplicacionWebSapis.actividadTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        actividad.*\r\nFROM            actividad";
+            this._commandCollection[0].CommandText = @"select titulo_pregunta, pregunta, deficiencia, bueno , excelente,  titulo_result,
+nota_est from pregunta_estud inner join 
+lista_pregunta  on lista_pregunta.pregunta_id = pregunta_estud.id_item_pregunt
+inner join respuesta_lista_pregunta on respuesta_lista_pregunta.id_formulario
+= lista_pregunta.id inner join result_pregunt on result_pregunt.id_pregunt
+= pregunta_estud.id where respuesta_lista_pregunta.email_usuario = 'e1315002236@live.uleam.edu.ec'
+group by  titulo_pregunta, pregunta, deficiencia, bueno, excelente, nota_est, titulo_result";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1091,7 +1016,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillActividad(actividad.actividadDataTable dataTable) {
+        public virtual int FillListaPregunta(lista_pregunta.DataTable1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1104,9 +1029,9 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual actividad.actividadDataTable GetDataActividad() {
+        public virtual lista_pregunta.DataTable1DataTable GetDataListaPregunta() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            actividad.actividadDataTable dataTable = new actividad.actividadDataTable();
+            lista_pregunta.DataTable1DataTable dataTable = new lista_pregunta.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1180,7 +1105,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(actividad dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(lista_pregunta dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1190,7 +1115,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(actividad dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(lista_pregunta dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1200,7 +1125,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(actividad dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(lista_pregunta dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1234,7 +1159,7 @@ namespace aplicacionWebSapis.actividadTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(actividad dataSet) {
+        public virtual int UpdateAll(lista_pregunta dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

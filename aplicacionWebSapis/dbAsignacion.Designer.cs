@@ -1586,16 +1586,23 @@ namespace aplicacionWebSapis.dbAsignacionTableAdapters {
             this._commandCollection[0].CommandText = @"SELECT        id, nombre_vinculacion, correo_est, correo_docente, correo_est_uni, codigo_vinculacion, nombre_proyecto, id_proyecto, nombre_docente, correo_presidente, hora_planificacion, facultad, cedula_docente, id_periodo, 
                          periodo_actual, correo_lider, promedio_proyecto, facultad_est
 FROM            asignacion
-WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = 'e1315002236@live.uleam.edu.ec')";
+WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = @correo_est)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo_est", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "correo_est", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillAsignacion(dbAsignacion.asignacionDataTable dataTable) {
+        public virtual int FillAsignacion(dbAsignacion.asignacionDataTable dataTable, string correo_est) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((correo_est == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(correo_est));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1607,8 +1614,14 @@ WHERE        (periodo_actual = 'Periodo 2020-2') AND (correo_est = 'e1315002236@
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dbAsignacion.asignacionDataTable GetDataAsignacion() {
+        public virtual dbAsignacion.asignacionDataTable GetDataAsignacion(string correo_est) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((correo_est == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(correo_est));
+            }
             dbAsignacion.asignacionDataTable dataTable = new dbAsignacion.asignacionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

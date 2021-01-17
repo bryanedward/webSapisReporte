@@ -313,4 +313,3 @@ C:\Users\dev\webSapisReporte\aplicacionWebSapis\obj\Debug\aplicacionWebSapis.csp
 C:\Users\dev\webSapisReporte\aplicacionWebSapis\obj\Debug\aplicacionWebSapis.csproj.CopyComplete
 C:\Users\dev\webSapisReporte\aplicacionWebSapis\obj\Debug\aplicacionWebSapis.dll
 C:\Users\dev\webSapisReporte\aplicacionWebSapis\obj\Debug\aplicacionWebSapis.pdb
-C:\Users\dev\webSapisReporte\aplicacionWebSapis\obj\Debug\aplicacionWebSapis.csprojAssemblyReference.cache

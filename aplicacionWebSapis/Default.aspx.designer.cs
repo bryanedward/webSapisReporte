@@ -15,6 +15,24 @@ namespace aplicacionWebSapis
     {
 
         /// <summary>
+        /// Control TextBoxEst.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEst;
+
+        /// <summary>
+        /// Control btnConsultar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConsultar;
+
+        /// <summary>
         /// Control ReportViewer1.
         /// </summary>
         /// <remarks>
@@ -33,12 +51,12 @@ namespace aplicacionWebSapis
         protected global::System.Web.UI.WebControls.ObjectDataSource data;
 
         /// <summary>
-        /// Control ObjectDataSource1.
+        /// Control ObjectDataSourceEst.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSourceEst;
     }
 }

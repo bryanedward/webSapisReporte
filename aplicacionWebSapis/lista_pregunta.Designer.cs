@@ -1002,22 +1002,29 @@ namespace aplicacionWebSapis.lista_preguntaTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"select titulo_pregunta, pregunta, deficiencia, bueno , excelente,  titulo_result,
-nota_est from pregunta_estud inner join 
-lista_pregunta  on lista_pregunta.pregunta_id = pregunta_estud.id_item_pregunt
-inner join respuesta_lista_pregunta on respuesta_lista_pregunta.id_formulario
-= lista_pregunta.id inner join result_pregunt on result_pregunt.id_pregunt
-= pregunta_estud.id where respuesta_lista_pregunta.email_usuario = 'e1315002236@live.uleam.edu.ec'
-group by  titulo_pregunta, pregunta, deficiencia, bueno, excelente, nota_est, titulo_result";
+            this._commandCollection[0].CommandText = @"SELECT        pregunta_estud.titulo_pregunta, lista_pregunta.pregunta, respuesta_lista_pregunta.deficiencia, respuesta_lista_pregunta.bueno, respuesta_lista_pregunta.excelente, pregunta_estud.titulo_result, result_pregunt.nota_est
+FROM            pregunta_estud INNER JOIN
+                         lista_pregunta ON lista_pregunta.pregunta_id = pregunta_estud.id_item_pregunt INNER JOIN
+                         respuesta_lista_pregunta ON respuesta_lista_pregunta.id_formulario = lista_pregunta.id INNER JOIN
+                         result_pregunt ON result_pregunt.id_pregunt = pregunta_estud.id
+WHERE        (respuesta_lista_pregunta.email_usuario = @correo_est)
+GROUP BY pregunta_estud.titulo_pregunta, lista_pregunta.pregunta, respuesta_lista_pregunta.deficiencia, respuesta_lista_pregunta.bueno, respuesta_lista_pregunta.excelente, result_pregunt.nota_est, pregunta_estud.titulo_result";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo_est", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "email_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillListaPregunta(lista_pregunta.DataTable1DataTable dataTable) {
+        public virtual int FillListaPregunta(lista_pregunta.DataTable1DataTable dataTable, string correo_est) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((correo_est == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(correo_est));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1029,8 +1036,14 @@ group by  titulo_pregunta, pregunta, deficiencia, bueno, excelente, nota_est, ti
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual lista_pregunta.DataTable1DataTable GetDataListaPregunta() {
+        public virtual lista_pregunta.DataTable1DataTable GetDataListaPregunta(string correo_est) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((correo_est == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(correo_est));
+            }
             lista_pregunta.DataTable1DataTable dataTable = new lista_pregunta.DataTable1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

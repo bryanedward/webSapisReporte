@@ -13,5 +13,12 @@ namespace aplicacionWebSapis
         {
 
         }
+
+        protected void btnConsultar_Click(object sender, EventArgs e)
+        {
+            this.data.SelectParameters["correo_est"].DefaultValue = TextBoxEst.Text.Trim();
+            this.ObjectDataSourceEst.SelectParameters["correo_est"].DefaultValue = TextBoxEst.Text.Trim();
+            this.ReportViewer1.LocalReport.Refresh();
+        }
     }
 }

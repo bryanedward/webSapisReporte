@@ -4,6 +4,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:TextBox ID="TextBoxEst" runat="server"></asp:TextBox>
+    <asp:Button ID="btnConsultar" runat="server" Text="Button"  OnClick="btnConsultar_Click"/>
+
     <div style="margin-top: 10px; border: 1px solid black">
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" BackColor="" ClientIDMode="AutoID" 
         HighlightBackgroundColor="" InternalBorderColor="204, 204, 204" InternalBorderStyle="Solid" 
@@ -21,7 +24,7 @@
                 <rsweb:ReportDataSource DataSourceId="data" Name="DataSetListPregunta" />
             </DataSources>
             <DataSources>
-                <rsweb:ReportDataSource DataSourceId="ObjectDataSource1" Name="DataSetAsignacion" />
+                <rsweb:ReportDataSource DataSourceId="ObjectDataSourceEst" Name="DataSetAsignacion" />
             </DataSources>
         </LocalReport>
     </rsweb:ReportViewer>
@@ -31,8 +34,16 @@
             runat="server" 
             OldValuesParameterFormatString="original_{0}" 
             SelectMethod="GetDataListaPregunta" 
-            TypeName="aplicacionWebSapis.lista_preguntaTableAdapters.DataTable1TableAdapter"></asp:ObjectDataSource>
+            TypeName="aplicacionWebSapis.lista_preguntaTableAdapters.DataTable1TableAdapter">
+            <SelectParameters>
+                <asp:Parameter Name="correo_est" Type="String"></asp:Parameter>
+            </SelectParameters>
+        </asp:ObjectDataSource>
 
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAsignacion" TypeName="aplicacionWebSapis.dbAsignacionTableAdapters.asignacionTableAdapter"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSourceEst" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAsignacion" TypeName="aplicacionWebSapis.dbAsignacionTableAdapters.asignacionTableAdapter">
+            <SelectParameters>
+                <asp:Parameter Name="correo_est" Type="String"></asp:Parameter>
+            </SelectParameters>
+        </asp:ObjectDataSource>
    </div>
 </asp:Content>
